@@ -10,6 +10,11 @@ public class RandomPos : MonoBehaviour
 
     void Awake()
     {
+        RandomXY();
+    }
+
+    private void RandomXY()
+    {
         XAxis = Random.Range(-300, 300);
         YAxis = Random.Range(-160, 160);
         rectTransform.anchoredPosition = new Vector2(XAxis, YAxis);
