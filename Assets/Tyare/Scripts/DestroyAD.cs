@@ -19,7 +19,7 @@ public class DestroyAD : MonoBehaviour
         //Debug.Log(Randchar);
         Randkey = (KeyCode)System.Enum.Parse(typeof(KeyCode), Randchar);
 
-        createText(Randkey);
+        CreateText(Randkey);
     }
 
     private void Update()
@@ -33,11 +33,9 @@ public class DestroyAD : MonoBehaviour
         }
     }
 
-    // Only needs done once
-    void createText(KeyCode key)
+    void CreateText(KeyCode key)
     {
-        // Get string version of KeyCode for text
         Keystring = System.Enum.GetName(typeof(KeyCode), key);
-        ADText.text = "Press "+ Keystring + " to close AD";
+        ADText.text = "Press "+ Keystring +" to close AD";
     }
 }

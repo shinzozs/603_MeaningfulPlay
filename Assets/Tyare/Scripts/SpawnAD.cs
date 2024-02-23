@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
 
-public class SpawnAds : MonoBehaviour
+public class SpawnAD : MonoBehaviour
 {
     public GameObject ADWindow;
     public Transform ADCanvas;
-    //public Transform Spawnpoint;
 
     private void OnTriggerEnter(Collider other)
     {

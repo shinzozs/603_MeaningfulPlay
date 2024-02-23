@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class RandomPos : MonoBehaviour
 {
-    public RectTransform rectTransform;
+    public RectTransform RectTransform;
     float XAxis, YAxis;
 
     void Awake()
@@ -17,6 +17,6 @@ public class RandomPos : MonoBehaviour
     {
         XAxis = Random.Range(-300, 300);
         YAxis = Random.Range(-160, 160);
-        rectTransform.anchoredPosition = new Vector2(XAxis, YAxis);
+        RectTransform.anchoredPosition = new Vector2(XAxis, YAxis);
     }
 }
