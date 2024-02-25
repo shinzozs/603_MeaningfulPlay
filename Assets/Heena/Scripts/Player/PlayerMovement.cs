@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            rb.drag = 0;
+            rb.drag = 5;
         }
         MyInput();
         SpeedControl();
