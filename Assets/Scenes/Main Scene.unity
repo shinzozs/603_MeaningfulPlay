@@ -260,6 +260,11 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 900920386682914120, guid: ecb27a9f6e2dbc949b69c5b2625ce0c2,
         type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 900920386682914120, guid: ecb27a9f6e2dbc949b69c5b2625ce0c2,
+        type: 3}
       propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
@@ -1085,6 +1090,12 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1477575443519673918, guid: db5e4de3076b77746bdeb40a65a423bc,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: c4e29169d9122a644b7b219844cd53a3,
+        type: 2}
     - target: {fileID: 1892366788387526245, guid: db5e4de3076b77746bdeb40a65a423bc,
         type: 3}
       propertyPath: m_Drag
@@ -1332,7 +1343,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 517498904}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: c4e29169d9122a644b7b219844cd53a3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

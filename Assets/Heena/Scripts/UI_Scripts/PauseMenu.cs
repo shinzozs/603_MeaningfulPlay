@@ -5,11 +5,18 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
+    public static PauseMenu instnace;
 
     //private void OnEnable()
     //{
     //    Cursor.visible = true;
     //}
+
+    private void Awake()
+    {
+        instnace = this;
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
