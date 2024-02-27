@@ -8,9 +8,23 @@ public class RandomAD : MonoBehaviour
     public VideoPlayer Videoplayer;
     public VideoClip[] Vids = new VideoClip[22];
 
+    
     private void Awake()
     {
         PlayRandomVid(Random.Range(0, Vids.Length));
+    }
+
+    public void Update()
+    {
+        if (PauseMenu.GameIsPaused) 
+        {
+            Videoplayer.Pause();
+
+        }
+        else
+        {
+            Videoplayer.Play();
+        }
     }
 
     public void PlayRandomVid(int ID)

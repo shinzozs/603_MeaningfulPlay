@@ -1,5 +1,8 @@
+using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Video;
+using Random = UnityEngine.Random;
 
 public class DestroyAD : MonoBehaviour
 {
@@ -24,11 +27,18 @@ public class DestroyAD : MonoBehaviour
 
     private void Update()
     {
-        if (gameObject != null)
+        if (PauseMenu.GameIsPaused)
         {
-            if (Input.GetKeyDown(Randkey))
+            DisableKey(Randkey);
+        }
+        else
+        {
+            if (gameObject != null)
             {
-                Destroy(gameObject);
+                if (Input.GetKeyDown(Randkey))
+                {
+                    Destroy(gameObject);
+                }
             }
         }
     }
@@ -37,5 +47,21 @@ public class DestroyAD : MonoBehaviour
     {
         Keystring = System.Enum.GetName(typeof(KeyCode), key);
         ADText.text = "Press "+ Keystring +" to close AD";
+    }
+
+    void DisableKey(KeyCode key)
+    {
+        // You may now catch null reference here.
+        try
+        {
+            if (Event.current.keyCode == key && (Event.current.type == EventType.KeyUp || Event.current.type == EventType.KeyDown))
+            {
+                Event.current.Use();
+            }
+        }
+        catch (NullReferenceException)
+        {
+            Debug.LogError("Ignore for now");
+        }
     }
 }
