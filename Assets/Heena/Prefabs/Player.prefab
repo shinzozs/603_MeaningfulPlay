@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1477575443519673918}
   m_Layer: 0
   m_Name: PlayerObj
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,7 +91,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1442850153320993418}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: c4e29169d9122a644b7b219844cd53a3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -180,9 +180,10 @@ GameObject:
   - component: {fileID: 7846513092528201538}
   - component: {fileID: 1892366788387526245}
   - component: {fileID: 1256129775258010688}
+  - component: {fileID: 3483282129803366203}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -195,7 +196,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8634836630028803826}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.041, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -214,7 +215,7 @@ Rigidbody:
   m_GameObject: {fileID: 8634836630028803826}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 6.46
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -244,8 +245,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 907a65a637366bb45956ad20494c3e69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalmoveSpeed: 0
   moveSpeed: 7
-  groundDrag: 5
+  sprintspeed: 14
+  groundDrag: 10
   jumpForce: 12
   jumpCoolDown: 0.25
   airMultiplier: 0.4
@@ -257,3 +260,22 @@ MonoBehaviour:
   isGrounded: 1
   orientation: {fileID: 8483189995416602037}
   rb: {fileID: 1892366788387526245}
+  StaminaController: {fileID: 0}
+--- !u!114 &3483282129803366203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8634836630028803826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a2019389f68ab44c98371c626450e8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStamina: 100
+  maxStamina: 100
+  staminaDrain: 40
+  staminaRegen: 20
+  staminaProgressUI: {fileID: 0}
+  sliderCanvassGroup: {fileID: 0}
