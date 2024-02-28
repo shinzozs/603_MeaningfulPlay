@@ -65,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
             moveSpeed = sprintspeed;
             StaminaController.playerStamina -= StaminaController.staminaDrain * Time.deltaTime;
             StaminaController.sliderCanvassGroup.alpha = 1;
-            Debug.Log("Sprinting");
+            //Debug.Log("Sprinting");
 
             if (StaminaController.playerStamina <= 0)
             {
@@ -81,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
             if (!isRunning && isRegen || !isRegen)
             {
                 StaminaController.playerStamina += StaminaController.staminaRegen * Time.deltaTime;
-                Debug.Log("Regening");
+                //Debug.Log("Regening");
 
                 if (StaminaController.playerStamina >= 100)
                 {
