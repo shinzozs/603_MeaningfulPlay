@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
+    [HideInInspector] public float originalmoveSpeed;
     public float moveSpeed;
+    public float sprintspeed;
     public float groundDrag;
 
     public float jumpForce;
@@ -14,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     bool readyToJump;
     [Header("Keybinds")]
     public KeyCode jumpKey = KeyCode.Space;
+    private KeyCode sprintkey = KeyCode.LeftShift;
 
     [Header("Ground Check")]
     public float playerHeight;
@@ -28,11 +33,18 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody rb;
     Vector3 moveDirection;
 
+    private bool isRunning = false;
+    private bool isRegen = false;
+    [HideInInspector] public StaminaController StaminaController;
+
     private void Start()
     {
+        StaminaController = GetComponent<StaminaController>();
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+        originalmoveSpeed = moveSpeed;
     }
+
     private void Update()
     {
         isGrounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, groundMask);
@@ -46,7 +58,46 @@ public class PlayerMovement : MonoBehaviour
         }
         MyInput();
         SpeedControl();
+        Sprint();
+
+        if (isRunning && (moveDirection.x != 0 || moveDirection.y != 0 || moveDirection.z != 0) && !isRegen)
+        {
+            moveSpeed = sprintspeed;
+            StaminaController.playerStamina -= StaminaController.staminaDrain * Time.deltaTime;
+            StaminaController.sliderCanvassGroup.alpha = 1;
+            Debug.Log("Sprinting");
+
+            if (StaminaController.playerStamina <= 0)
+            {
+                StaminaController.playerStamina = 0;
+                moveSpeed = originalmoveSpeed;
+                isRegen = true;
+            }
+            StaminaController.staminaProgressUI.fillAmount = StaminaController.playerStamina / StaminaController.maxStamina;
+        }
+        else
+        {
+            moveSpeed = originalmoveSpeed;
+            if (!isRunning && isRegen || !isRegen)
+            {
+                StaminaController.playerStamina += StaminaController.staminaRegen * Time.deltaTime;
+                Debug.Log("Regening");
+
+                if (StaminaController.playerStamina >= 100)
+                {
+                    StaminaController.playerStamina = 100;
+                    StaminaController.sliderCanvassGroup.alpha = 0;
+                    isRegen = false;
+                }
+                else
+                {
+                    //isRegen = true;
+                }
+                StaminaController.staminaProgressUI.fillAmount = StaminaController.playerStamina / StaminaController.maxStamina;
+            }
+        }
     }
+
     private void FixedUpdate()
     {
         MovePlayer();
@@ -67,10 +118,14 @@ public class PlayerMovement : MonoBehaviour
     private void MovePlayer()
     {
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
-        if(isGrounded)
+        if (isGrounded)
+        {
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
-        else if(!isGrounded)
+        }
+        else if (!isGrounded)
+        {
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
+        }
     }
     private void SpeedControl()
     {
@@ -89,5 +144,33 @@ public class PlayerMovement : MonoBehaviour
     private void ResetJump()
     {
         readyToJump = true;
+    }
+
+    private void Sprint()
+    {
+        if (Input.GetKey(sprintkey))
+        {
+            isRunning = true;
+        }
+        else
+        {
+            isRunning = false;
+        }
+    }
+
+    private void Regen()
+    {
+        if (StaminaController.playerStamina <= 0)
+        {
+            isRegen = true;
+        }
+        else if (StaminaController.playerStamina >= 100)
+        {
+            isRegen = false;
+        }
+        else 
+        { 
+            isRegen = false; 
+        }
     }
 }
