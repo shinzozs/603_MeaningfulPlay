@@ -17,12 +17,8 @@ public class StaminaController : MonoBehaviour
     public Image staminaProgressUI = null;
     public CanvasGroup sliderCanvassGroup = null;
 
-    PlayerMovement PlayerMovement;
-
-
     private void Start()
     {
-        PlayerMovement = GetComponent<PlayerMovement>();
         sliderCanvassGroup.alpha = 0;
     }
 }
