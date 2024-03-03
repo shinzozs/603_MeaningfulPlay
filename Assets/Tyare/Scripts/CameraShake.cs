@@ -15,7 +15,7 @@ public class CameraShake : MonoBehaviour
 
     [SerializeField] private GameObject Player;
     [SerializeField] private GameObject Enemey;
-    public float distance;
+    [HideInInspector] public float distance;
 
     private void Start()
     {
