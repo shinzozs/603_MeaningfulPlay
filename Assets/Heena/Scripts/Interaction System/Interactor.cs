@@ -8,6 +8,7 @@ public interface IInteractable
 }
 public class Interactor : MonoBehaviour
 {
+    public bool isInteracting = false;
     public Transform interactorSource;
     public float interactRange;
     void Start()
@@ -25,6 +26,7 @@ public class Interactor : MonoBehaviour
                 if(hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactObj))
                 {
                     interactObj.Interact();
+                    isInteracting = true;
                 }
             }
         }
