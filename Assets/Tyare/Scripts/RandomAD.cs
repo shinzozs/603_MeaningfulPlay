@@ -7,7 +7,6 @@ public class RandomAD : MonoBehaviour
 {
     public VideoPlayer Videoplayer;
     public VideoClip[] Vids = new VideoClip[22];
-    private GameObject ADWindowClone;
 
     
     private void Awake()
@@ -20,6 +19,7 @@ public class RandomAD : MonoBehaviour
         if (PauseMenu.GameIsPaused) 
         {
             Videoplayer.Pause();
+
         }
         else
         {

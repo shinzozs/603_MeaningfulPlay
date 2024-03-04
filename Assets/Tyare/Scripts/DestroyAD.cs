@@ -1,6 +1,5 @@
 using System;
 using TMPro;
-using UnityEditor.PackageManager.UI;
 using UnityEngine;
 using UnityEngine.Video;
 using Random = UnityEngine.Random;
@@ -11,6 +10,7 @@ public class DestroyAD : MonoBehaviour
     private string Randchar;
     private string Keystring;
     private KeyCode Randkey;
+
     public TMP_Text ADText;
 
     private void Awake()
