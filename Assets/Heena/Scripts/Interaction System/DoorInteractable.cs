@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DoorInteractable : MonoBehaviour, IInteractable
 {
+
+    public bool isInteractable { get; set; }
     public void Interact()
     {
         Debug.Log("Door Interacted");
