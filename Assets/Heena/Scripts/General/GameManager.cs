@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     {
         onboardingInstructions.Add("Welcome to Consumption, Press Space Bar to go through the Onboarding!");
         onboardingInstructions.Add("Use W, A, S, D to move around");
+        onboardingInstructions.Add("Use Keyboard Keys to Close Popups");
+        onboardingInstructions.Add("Use Left Shift to Sprint");
         onboardingInstructions.Add("Press E to interact with the environment");
         onboardingInstructions.Add("Press Esc to Pause/Resume");
         onboardingInstructions.Add("Press Tab to Quit the game");
