@@ -9,6 +9,9 @@ public class EnemyPathing : MonoBehaviour
     [SerializeField]
     private Transform player;
 
+    private Vector3 playerHead;
+    private Vector3 enemyHead;
+
     private bool rayCollision;
     private RaycastHit hit;
     private int layerMask;
@@ -32,6 +35,11 @@ public class EnemyPathing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        playerHead = player.position;
+        playerHead.y += 1f;
+        enemyHead = this.transform.position;
+        enemyHead.y += 1f;
+
         Debug.Log("Enemy raycast:" + hit.collider);
         if (this.GetComponentInChildren<Renderer>().isVisible && rayCollision && !hit.collider.isTrigger && hit.collider.CompareTag("Player"))
         {
@@ -46,7 +54,7 @@ public class EnemyPathing : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rayCollision = Physics.Raycast(this.transform.position, player.position - this.transform.position, out hit, stopDistance, layerMask);
+        rayCollision = Physics.Raycast(enemyHead, playerHead - enemyHead, out hit, stopDistance, layerMask);
         //Debug.DrawRay(this.transform.position, (player.position - this.transform.position) * hit.distance, Color.yellow);
         /*
         rayCollision = 
