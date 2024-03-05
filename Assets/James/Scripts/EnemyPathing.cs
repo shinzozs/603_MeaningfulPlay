@@ -32,7 +32,7 @@ public class EnemyPathing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(hit.collider);
+        Debug.Log("Enemy raycast:" + hit.collider);
         if (this.GetComponentInChildren<Renderer>().isVisible && rayCollision && !hit.collider.isTrigger && hit.collider.CompareTag("Player"))
         {
             enemy.isStopped = true;

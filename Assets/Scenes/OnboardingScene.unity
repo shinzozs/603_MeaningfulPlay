@@ -249,6 +249,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1442850153320993418, guid: db5e4de3076b77746bdeb40a65a423bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3483282129803366203, guid: db5e4de3076b77746bdeb40a65a423bc,
         type: 3}
       propertyPath: staminaProgressUI
@@ -314,6 +319,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634836630028803826, guid: db5e4de3076b77746bdeb40a65a423bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -796,6 +806,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1065460848}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1084136339 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7846513092528201538, guid: db5e4de3076b77746bdeb40a65a423bc,
+    type: 3}
+  m_PrefabInstance: {fileID: 178075090}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1158558991
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1009,6 +1025,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1183040716572506192, guid: 6013efcd99a071a43a6a890344908e96,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1084136339}
     - target: {fileID: 4945839319751723860, guid: 6013efcd99a071a43a6a890344908e96,
         type: 3}
       propertyPath: m_LocalPosition.x
