@@ -3125,11 +3125,46 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 92317274701799671, guid: 6013efcd99a071a43a6a890344908e96,
+        type: 3}
+      propertyPath: angle
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 92317274701799671, guid: 6013efcd99a071a43a6a890344908e96,
+        type: 3}
+      propertyPath: radius
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 92317274701799671, guid: 6013efcd99a071a43a6a890344908e96,
+        type: 3}
+      propertyPath: playerRef
+      value: 
+      objectReference: {fileID: 781997281}
+    - target: {fileID: 92317274701799671, guid: 6013efcd99a071a43a6a890344908e96,
+        type: 3}
+      propertyPath: targetMask.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 92317274701799671, guid: 6013efcd99a071a43a6a890344908e96,
+        type: 3}
+      propertyPath: obstructionMask.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1183040716572506192, guid: 6013efcd99a071a43a6a890344908e96,
         type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 838522274}
+    - target: {fileID: 3367079297090308519, guid: 6013efcd99a071a43a6a890344908e96,
+        type: 3}
+      propertyPath: Enemey
+      value: 
+      objectReference: {fileID: 3507394885613729270}
+    - target: {fileID: 3367079297090308519, guid: 6013efcd99a071a43a6a890344908e96,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 781997281}
     - target: {fileID: 4945839319751723860, guid: 6013efcd99a071a43a6a890344908e96,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3197,18 +3232,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 3507394885613729275}
-    - targetCorrespondingSourceObject: {fileID: 9170361912266978739, guid: 6013efcd99a071a43a6a890344908e96,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3507394885613729274}
-    - targetCorrespondingSourceObject: {fileID: 9170361912266978739, guid: 6013efcd99a071a43a6a890344908e96,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3507394885613729273}
-    - targetCorrespondingSourceObject: {fileID: 9170361912266978739, guid: 6013efcd99a071a43a6a890344908e96,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3507394885613729272}
   m_SourcePrefab: {fileID: 100100000, guid: 6013efcd99a071a43a6a890344908e96, type: 3}
 --- !u!1 &3507394885613729270 stripped
 GameObject:
@@ -3222,99 +3245,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3507394885613729269}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3507394885613729272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3507394885613729270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ImpulseDefinition:
-    m_ImpulseChannel: 1
-    m_ImpulseShape: 4
-    m_CustomImpulseShape:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_ImpulseDuration: 0.2
-    m_ImpulseType: 0
-    m_DissipationRate: 0.25
-    m_RawSignal: {fileID: 0}
-    m_AmplitudeGain: 1
-    m_FrequencyGain: 1
-    m_RepeatMode: 0
-    m_Randomize: 1
-    m_TimeEnvelope:
-      m_AttackShape:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      m_DecayShape:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      m_AttackTime: 0
-      m_SustainTime: 0.2
-      m_DecayTime: 0.7
-      m_ScaleWithImpact: 1
-      m_HoldForever: 0
-    m_ImpactRadius: 100
-    m_DirectionMode: 0
-    m_DissipationMode: 2
-    m_DissipationDistance: 100
-    m_PropagationSpeed: 343
-  m_DefaultVelocity: {x: 0, y: -1, z: 0}
---- !u!114 &3507394885613729273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3507394885613729270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 664fd13d374d6c24292a3ba435c208ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 30
-  angle: 50
-  playerRef: {fileID: 781997281}
-  targetMask:
-    serializedVersion: 2
-    m_Bits: 256
-  obstructionMask:
-    serializedVersion: 2
-    m_Bits: 8
-  canSeePlayer: 0
---- !u!114 &3507394885613729274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3507394885613729270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fdb80fb9fdb8324fb462801b7b65ae3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ScreenShakeIntensity20up: 0.0001
-  ScreenShakeIntensity10to20: 0.0005
-  ScreenShakeIntensity10below: 0.001
-  Player: {fileID: 781997281}
-  Enemey: {fileID: 3507394885613729270}
-  distance: 0
 --- !u!114 &3507394885613729275
 MonoBehaviour:
   m_ObjectHideFlags: 0
