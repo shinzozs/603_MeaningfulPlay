@@ -116,7 +116,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7089207355686306963}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CameraPos
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8483189995416602037}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Orientation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 1256129775258010688}
   - component: {fileID: 3483282129803366203}
   - component: {fileID: 5523750934247065617}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -310,8 +310,18 @@ PrefabInstance:
       objectReference: {fileID: 7089207355686306963}
     - target: {fileID: 1913572519246730411, guid: dc78ac71911dd034aa8adaa4dc23f3fb,
         type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1913572519246730411, guid: dc78ac71911dd034aa8adaa4dc23f3fb,
+        type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2519714958908406774, guid: dc78ac71911dd034aa8adaa4dc23f3fb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2519714958908406774, guid: dc78ac71911dd034aa8adaa4dc23f3fb,
         type: 3}
@@ -383,6 +393,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CameraHolder
       objectReference: {fileID: 0}
+    - target: {fileID: 3629223143820045756, guid: dc78ac71911dd034aa8adaa4dc23f3fb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6238258084834777346, guid: dc78ac71911dd034aa8adaa4dc23f3fb,
         type: 3}
       propertyPath: m_FocalLength
@@ -402,6 +417,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Follow
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654135481119705065, guid: dc78ac71911dd034aa8adaa4dc23f3fb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 9099477761353034056, guid: dc78ac71911dd034aa8adaa4dc23f3fb,
         type: 3}

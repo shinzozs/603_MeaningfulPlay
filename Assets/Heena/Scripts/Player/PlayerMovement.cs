@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundMask;
     public bool isGrounded;
 
-    public Transform orientation;
+    [SerializeField] private Transform orientation;
 
     float horizontalInput;
     float verticalInput;
