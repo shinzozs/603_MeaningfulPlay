@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            if(!chatBox.isFocused && Input.GetKeyDown(KeyCode.Return))
+            if(!chatBox.isFocused && Input.GetKeyDown(KeyCode.T))
             {
                 chatBox.ActivateInputField();
             }
