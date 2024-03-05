@@ -4024,6 +4024,11 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 479146543}
+    - target: {fileID: 3367079297090308519, guid: 6013efcd99a071a43a6a890344908e96,
+        type: 3}
+      propertyPath: ScreenShakeIntensity10below
+      value: 0.003
+      objectReference: {fileID: 0}
     - target: {fileID: 4945839319751723860, guid: 6013efcd99a071a43a6a890344908e96,
         type: 3}
       propertyPath: m_LocalPosition.x
