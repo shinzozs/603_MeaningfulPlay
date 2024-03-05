@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ColliderActivation : MonoBehaviour
 {
@@ -10,7 +11,10 @@ public class ColliderActivation : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            objectToActivate.SetActive(true);
+            //objectToActivate.SetActive(true);
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
  }

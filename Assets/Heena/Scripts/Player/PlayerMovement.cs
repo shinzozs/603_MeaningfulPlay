@@ -36,6 +36,8 @@ public class PlayerMovement : MonoBehaviour
     private bool isRegen = false;
     [HideInInspector] public StaminaController StaminaController;
 
+    private Animator animator;
+
     private void Start()
     {
         StaminaController = GetComponent<StaminaController>();

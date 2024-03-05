@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class DoorInteractable : MonoBehaviour, IInteractable
 {
-
     public bool isInteractable { get; set; }
+
+    CollectKey CollectKey;
+
+    private void Awake()
+    {
+        CollectKey = FindAnyObjectByType<CollectKey>();
+    }
+
     public void Interact()
     {
-        Debug.Log("Door Interacted");
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (CollectKey.keyCollected == 1)
+        {
+            Debug.Log("Door Interacted");
+            gameObject.SetActive(false);
+        }
     }
 }

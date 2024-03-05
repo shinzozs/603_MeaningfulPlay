@@ -987,6 +987,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 36399176927603983, guid: db5e4de3076b77746bdeb40a65a423bc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1256129775258010688, guid: db5e4de3076b77746bdeb40a65a423bc,
         type: 3}
       propertyPath: groundDrag
@@ -1023,6 +1028,11 @@ PrefabInstance:
       propertyPath: sliderCanvassGroup
       value: 
       objectReference: {fileID: 1129188853}
+    - target: {fileID: 7089207355686306963, guid: db5e4de3076b77746bdeb40a65a423bc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.55
+      objectReference: {fileID: 0}
     - target: {fileID: 7846513092528201538, guid: db5e4de3076b77746bdeb40a65a423bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2012,7 +2022,9 @@ PrefabInstance:
       propertyPath: orientation
       value: 
       objectReference: {fileID: 917107635}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7640471509230091992, guid: dc78ac71911dd034aa8adaa4dc23f3fb, type: 3}
+    - {fileID: 3441227543540604081, guid: dc78ac71911dd034aa8adaa4dc23f3fb, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
