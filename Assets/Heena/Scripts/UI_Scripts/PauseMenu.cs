@@ -50,6 +50,16 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = true;
     }
 
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        pauseMenuUI.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+    }
+
     public void LoadMenu()
     {
         // You can adjust the scene index or scene name to match your main menu
