@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,21 +15,46 @@ public class GameManager : MonoBehaviour
     private int currInstruction = 0;
     public TMP_InputField chatBox;
     public Color playerMessage, info;
+    private int b_index;
     void Start()
     {
-        onboardingInstructions.Add("Welcome to Consumption, Press Space Bar to go through the Onboarding!");
-        onboardingInstructions.Add("My Name is The Director, you have beutiful eyes.......");
-        onboardingInstructions.Add("Welcome to my realm. You let a self absorbed and arogant life...");
-        onboardingInstructions.Add("Your need to inhale the displesure of others for your own entertainment is your ruin");
-        onboardingInstructions.Add("You will now know what it feels like to be my entertainment as I consume your soul");
-        onboardingInstructions.Add("Going to close to screens in my realm will polute your vision with spam.");
-        onboardingInstructions.Add("Be careful though, some spam messages have important information hidden within...");
-        onboardingInstructions.Add("Use W, A, S, D to move around....just remeber I can see you......");
-        onboardingInstructions.Add("Use Keyboard Keys to Close Popups.....the same pop-ups you craved in life......");
-        onboardingInstructions.Add("Use Left Shift to Sprint...but you cant run for ever : )");
-        onboardingInstructions.Add("Press E to interact with the environment and steal items : (");
-        onboardingInstructions.Add("Press Esc to Pause/Resume..just know it wont save you....");
-        onboardingInstructions.Add("Press Tab to Quit to give up");
+        b_index = SceneManager.GetActiveScene().buildIndex;
+        if (b_index == 1)
+        {
+            onboardingInstructions.Add("Welcome to Consumption, Press Space Bar to go through the Onboarding!");
+            onboardingInstructions.Add("My Name is The Director, you have beutiful eyes.......");
+            onboardingInstructions.Add("Welcome to my realm. You let a self absorbed and arogant life...");
+            onboardingInstructions.Add("Your need to inhale the displesure of others for your own entertainment is your ruin");
+            onboardingInstructions.Add("You will now know what it feels like to be my entertainment as I consume your soul");
+            onboardingInstructions.Add("Going to close to screens in my realm will polute your vision with spam.");
+            onboardingInstructions.Add("Be careful though, some spam messages have important information hidden within...");
+            onboardingInstructions.Add("Use W, A, S, D to move around....just remeber I can see you......");
+            onboardingInstructions.Add("Use Keyboard Keys to Close Popups.....the same pop-ups you craved in life......");
+            onboardingInstructions.Add("Use Left Shift to Sprint...but you cant run for ever : )");
+            onboardingInstructions.Add("Press E to interact with the environment and steal items : (");
+            onboardingInstructions.Add("Press Esc to Pause/Resume..just know it wont save you....");
+            onboardingInstructions.Add("Press Tab to Quit to give up");
+        }
+        else if (b_index == 2)
+        {
+            onboardingInstructions.Add("I can see you");
+            onboardingInstructions.Add("You have lovely shoes");
+            onboardingInstructions.Add("So lonely......");
+            onboardingInstructions.Add("They never seem to sleep");
+            onboardingInstructions.Add("This is getting boring");
+            onboardingInstructions.Add("Thats your good side.....");
+            onboardingInstructions.Add("Thankyou for the donation");
+            onboardingInstructions.Add("I grow tired of your games....");
+            onboardingInstructions.Add("I can see you");
+            onboardingInstructions.Add("You have lovely shoes");
+            onboardingInstructions.Add("So lonely......");
+            onboardingInstructions.Add("They never seem to sleep");
+            onboardingInstructions.Add("This is getting boring");
+            onboardingInstructions.Add("Thats your good side.....");
+            onboardingInstructions.Add("Thankyou for the donation");
+            onboardingInstructions.Add("I grow tired of your games....");
+            onboardingInstructions.Add("You will die here");
+        }
 
         //SendMessageToChat(onboardingInstructions[currInstruction]);
         for (int i = 0; i < maxMsg; i++)
