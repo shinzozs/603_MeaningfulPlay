@@ -41,14 +41,17 @@ public class EnemyPathing : MonoBehaviour
         enemyHead.y += 1f;
 
         //Debug.Log("Enemy raycast:" + hit.collider);
-        if (this.GetComponentInChildren<Renderer>().isVisible && rayCollision && !hit.collider.isTrigger && hit.collider.CompareTag("Player"))
+        if (this.GetComponentInChildren<Renderer>().isVisible && rayCollision &&  hit.collider.CompareTag("Player"))
         {
+            //this.transform.LookAt(player);
             enemy.isStopped = true;
+            enemy.SetDestination(this.transform.position);
         }
         else
-        { 
-            enemy.isStopped = false;
+        {
             enemy.SetDestination(player.position);
+            enemy.isStopped = false;
+
         }
     }
 
