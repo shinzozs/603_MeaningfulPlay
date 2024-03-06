@@ -6,7 +6,12 @@ using UnityEngine.EventSystems;
 public class DirectorAnimation : MonoBehaviour
 {
     Vector3 moveDirection;
-    private Animator animator;
+    [SerializeField] private Animator animator;
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     // Update is called once per frame
     void Update()
