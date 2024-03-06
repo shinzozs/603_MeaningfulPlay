@@ -24,8 +24,6 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundMask;
     public bool isGrounded;
 
-    [SerializeField] private Transform orientation;
-
     float horizontalInput;
     float verticalInput;
 
@@ -118,7 +116,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovePlayer()
     {
-        moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
+        moveDirection = this.transform.forward * verticalInput + this.transform.right * horizontalInput;
         if (isGrounded)
         {
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
