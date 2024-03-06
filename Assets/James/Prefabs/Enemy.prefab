@@ -293,8 +293,8 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 2
-  m_Radius: 0.5
+  m_Height: 2.5
+  m_Radius: 0.3
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -309,7 +309,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 9170361912266978739}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.4
   m_Speed: 6
   m_Acceleration: 15
   avoidancePriority: 50
@@ -477,7 +477,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 072ba6cb158aadc4dace9a7e6bd8b20b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 072ba6cb158aadc4dace9a7e6bd8b20b,
         type: 3}
