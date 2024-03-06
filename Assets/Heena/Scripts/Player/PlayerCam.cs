@@ -7,9 +7,9 @@ public class PlayerCam : MonoBehaviour
     public float sensX;
     public float sensY;
 
-    public Transform orientation;
+    [SerializeField] private Transform orientation;
     float xRotation = 0f;
-    float yRotation;
+    float yRotation = 0f;
 
     private void Start()
     {
@@ -17,7 +17,7 @@ public class PlayerCam : MonoBehaviour
         Cursor.visible = false;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         float mouseX = Input.GetAxis("Mouse X") * sensX * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * sensY * Time.deltaTime;

@@ -24,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundMask;
     public bool isGrounded;
 
+    [SerializeField] private Transform orientation;
+
     float horizontalInput;
     float verticalInput;
 
@@ -80,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
             if (!isRunning && isRegen || !isRegen)
             {
                 StaminaController.playerStamina += StaminaController.staminaRegen * Time.deltaTime;
-                //Debug.Log("Regening");
+                Debug.Log("Regening");
 
                 if (StaminaController.playerStamina >= 100)
                 {
@@ -116,7 +118,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovePlayer()
     {
-        moveDirection = this.transform.forward * verticalInput + this.transform.right * horizontalInput;
+        moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
         if (isGrounded)
         {
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
