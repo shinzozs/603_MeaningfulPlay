@@ -622,12 +622,18 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1803752129}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0542dff139aa00e469ba71d12e22c037, type: 3}
+--- !u!1 &270259010 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5028514164486557670, guid: 0542dff139aa00e469ba71d12e22c037,
+    type: 3}
+  m_PrefabInstance: {fileID: 270259009}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &270259011 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 591471722744082370, guid: 0542dff139aa00e469ba71d12e22c037,
@@ -4008,6 +4014,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 178075092}
+    - target: {fileID: 1183040716572506192, guid: 6013efcd99a071a43a6a890344908e96,
+        type: 3}
+      propertyPath: adParent
+      value: 
+      objectReference: {fileID: 270259010}
     - target: {fileID: 3367079297090308519, guid: 6013efcd99a071a43a6a890344908e96,
         type: 3}
       propertyPath: Enemey
@@ -4530,12 +4541,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1725277772}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1803752129 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3685992547495500511, guid: db5e4de3076b77746bdeb40a65a423bc,
-    type: 3}
-  m_PrefabInstance: {fileID: 178075090}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1878781370
 GameObject:
   m_ObjectHideFlags: 0

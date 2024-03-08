@@ -5,7 +5,9 @@ using UnityEngine.AI;
 
 public class EnemyPathing : MonoBehaviour
 {
-    private NavMeshAgent enemy;
+    public NavMeshAgent enemy;
+    public GameObject adParent;
+
     [SerializeField]
     private Transform player;
 
@@ -18,6 +20,7 @@ public class EnemyPathing : MonoBehaviour
 
     [SerializeField]
     private float stopDistance = 7f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -40,19 +43,32 @@ public class EnemyPathing : MonoBehaviour
         enemyHead = this.transform.position;
         enemyHead.y += 1f;
 
+
         //Debug.Log("Enemy raycast:" + hit.collider);
         if (this.GetComponentInChildren<Renderer>().isVisible && rayCollision &&  hit.collider.CompareTag("Player"))
         {
             //this.transform.LookAt(player);
-            enemy.isStopped = true;
-            enemy.SetDestination(this.transform.position);
+            if (adParent.transform.childCount <= 4)
+            {
+                enemy.SetDestination(this.transform.position);
+                enemy.isStopped = true;
+                enemy.speed = 6;
+            }
+            else
+            {
+
+                enemy.SetDestination(player.position);
+                enemy.isStopped = false;
+                enemy.speed = 2;
+            }
         }
         else
         {
             enemy.SetDestination(player.position);
             enemy.isStopped = false;
-
+            enemy.speed = 6;
         }
+
     }
 
     private void FixedUpdate()

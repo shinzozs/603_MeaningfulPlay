@@ -228,6 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 001fa37b80a921b41b635fb7f3dcef37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 1981982321274023652}
   player: {fileID: 0}
   stopDistance: 12
 --- !u!114 &1360729533564635067
