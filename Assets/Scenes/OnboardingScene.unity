@@ -1180,6 +1180,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1084136339}
+    - target: {fileID: 1183040716572506192, guid: 6013efcd99a071a43a6a890344908e96,
+        type: 3}
+      propertyPath: adParent
+      value: 
+      objectReference: {fileID: 189172116}
     - target: {fileID: 3367079297090308519, guid: 6013efcd99a071a43a6a890344908e96,
         type: 3}
       propertyPath: Player
@@ -1239,6 +1244,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 9170361912266978739, guid: 6013efcd99a071a43a6a890344908e96,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1337,6 +1347,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 23800000, guid: 9a2adb9f57fa78047b8f5777907ef2f3,
         type: 2}
+    - target: {fileID: 4195768034586323017, guid: d596f9c13d51687498edfd9019bb71a7,
+        type: 3}
+      propertyPath: m_LayerMask.m_Bits
+      value: 767
+      objectReference: {fileID: 0}
     - target: {fileID: 4204199476156918203, guid: d596f9c13d51687498edfd9019bb71a7,
         type: 3}
       propertyPath: m_Intensity
