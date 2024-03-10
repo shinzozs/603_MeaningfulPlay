@@ -24,8 +24,6 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundMask;
     public bool isGrounded;
 
-    public Transform orientation;
-
     float horizontalInput;
     float verticalInput;
 
@@ -35,6 +33,8 @@ public class PlayerMovement : MonoBehaviour
     private bool isRunning = false;
     private bool isRegen = false;
     [HideInInspector] public StaminaController StaminaController;
+
+    private Animator animator;
 
     private void Start()
     {
@@ -116,7 +116,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovePlayer()
     {
-        moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
+        moveDirection = this.transform.forward * verticalInput + this.transform.right * horizontalInput;
         if (isGrounded)
         {
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
